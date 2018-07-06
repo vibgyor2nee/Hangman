@@ -1,0 +1,40 @@
+ball
+cap
+bat
+batter
+bunt
+catch
+catcher
+coach
+curve
+dugout
+fence
+field
+umpire
+first baseman
+foul
+foul line
+four ball
+glove
+helmet
+hit
+home plate
+inning
+left fielder
+major league
+minor league
+pitch
+pitcher
+right fielder
+run
+runner
+scoreboard
+second baseman
+short stop
+slide
+steal
+strike
+strike out
+third baseman
+throw
+walk

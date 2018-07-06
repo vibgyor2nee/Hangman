@@ -1,0 +1,14 @@
+airplane
+bicycle
+boat
+bus
+car
+helicopter
+horse
+jet
+motorcycle
+ship
+subway
+taxi
+train
+truck

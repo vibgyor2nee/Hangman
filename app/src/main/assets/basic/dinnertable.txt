@@ -1,0 +1,16 @@
+bowl
+cup
+dish
+fork
+glass
+knife
+mug
+napkin
+pepper
+pitcher
+plate
+salad
+salt
+saucer
+spoon
+sugar

@@ -1,0 +1,42 @@
+attic
+basement
+bath tub
+bathroom
+bed
+bedroom
+blanket
+bookcase
+carpet
+ceiling
+chair
+closet
+couch
+curtain
+desk
+dining room
+door
+fan
+floor
+furniture
+garage
+hall
+hallway
+key
+kitchen
+lamp
+living room
+lock
+mirror
+picture
+porch
+roof
+room
+rug
+shelf
+sink
+sofa
+stairs
+table
+toilet
+wall
+window

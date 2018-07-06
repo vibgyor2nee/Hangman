@@ -1,0 +1,24 @@
+airport
+apartment building
+bank
+barber shop
+book store
+bowling alley
+bus stop
+church
+convenience store
+department store
+fire department
+gas station
+hospital
+house
+library
+movie theater
+museum
+office building
+post office
+restaurant
+school
+mall
+supermarket
+train station

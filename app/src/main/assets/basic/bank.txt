@@ -1,0 +1,26 @@
+account
+bills
+borrow
+alarm
+cash
+cashier
+check
+coins
+credit
+credit card
+currency
+customer
+deposit
+interest
+lend
+loan
+manager
+money
+mortgage
+pay
+save
+savings
+guard
+teller
+vault
+withdraw

@@ -1,0 +1,14 @@
+beach
+desert
+forest
+hill
+mountain
+ocean
+pond
+river
+lake
+sea
+stream
+valley
+waterfall
+woods
