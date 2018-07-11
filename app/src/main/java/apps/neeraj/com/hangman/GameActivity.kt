@@ -13,7 +13,6 @@ import android.widget.AdapterView.OnItemSelectedListener
 import java.io.InputStream
 import java.util.*
 
-//class GameActivity : AppCompatActivity() View.OnClickListener, OnItemSelectedListener {
 class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListener{
 
     enum class Alphabets(val alpha:Char) {
@@ -186,10 +185,12 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
                     imgView.visibility = View.VISIBLE
 
                     spinner.visibility = View.VISIBLE
-                    spinner.setSelection(0)
-
-                    dpStrTxtView.visibility = View.INVISIBLE
-
+                    if (typeSelected) {
+                        this.selectWordAndSetDPString()
+                    }
+                    else {
+                        dpStrTxtView.visibility = View.INVISIBLE
+                    }
                     iconImgView.visibility = View.INVISIBLE
 
                     val txtViewHint = findViewById<TextView>(R.id.textView)
@@ -200,7 +201,6 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
                     misses.visibility = View.VISIBLE
 
                     Log.d(TAG, "" + !letter.equals('\u0000', false))
-
                 }
             }
         }
@@ -256,7 +256,6 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
                 dpStrTxtView.text = displayString
                 txtView.text = "Good going!"
                 txtView.visibility = View.VISIBLE
-//                Log.d(TAG, "else part, $displayString")
             }
             imgView.visibility = View.VISIBLE
             if (attempts == 0) {
@@ -268,7 +267,6 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
                 letter = '\u0000'
                 attempts = TOTAL_ATTEMPTS
                 missList.clear()
-//                attemptsTxtView.text = "Attempts: " + attempts
 
             }
         }
@@ -361,18 +359,7 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
                 inputStream = assets.open(fileForType)
                 wordList = inputStream.bufferedReader().readLines() as MutableList<String>
 
-                val size = wordList.size
-                val randomNum = randomFn(0, size - 1)
-                Log.d(TAG, "" + randomNum + ", " + wordList[randomNum].toString())
-
-                randomWord = wordList[randomNum].toString().toUpperCase()
-
-                val length = randomWord.length
-                displayString = "_".repeat(length)
-                Log.d(TAG, displayString)
-
-                dpStrTxtView.text = displayString
-                dpStrTxtView.visibility = View.VISIBLE
+                this.selectWordAndSetDPString()
 
                 ///
                 newGame = true
@@ -401,8 +388,20 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
         }
     }
 
+    private fun selectWordAndSetDPString() {
+        val size = wordList.size
+        val randomNum = randomFn(0, size - 1)
+        Log.d(TAG, "" + randomNum + ", " + this.wordList[randomNum])
+
+        randomWord = wordList[randomNum].toUpperCase()
+        val length = randomWord.length
+        displayString = "_".repeat(length)
+        dpStrTxtView.text = displayString
+        dpStrTxtView.visibility = View.VISIBLE
+        Log.d(TAG, displayString)
+    }
+
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
     private fun randomFn(from: Int, to: Int) : Int {
