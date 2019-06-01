@@ -90,7 +90,6 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
 
     override fun onClick(v:View) {
         Log.d(TAG, "OnClick")
-        if (v != null) {
             when(v.id) {
                 R.id.button1 -> {
                     this.letter = Alphabets.A.toString()[0]
@@ -203,7 +202,6 @@ class GameActivity : AppCompatActivity(), OnClickListener, OnItemSelectedListene
                     Log.d(TAG, "" + !letter.equals('\u0000', false))
                 }
             }
-        }
         if (!letter.equals('\u0000', false) && newGame && typeSelected) {
             Log.d(TAG, "In if for letter comparison")
             oldString = displayString

@@ -242,12 +242,13 @@
                                 style="@android:style/Widget.Holo.Button"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="@string/g"
                                 android:onClick="onClick"
+                                android:text="@string/g"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toEndOf="@+id/button6"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.0" />
 
 
                         </android.support.constraint.ConstraintLayout>
@@ -587,11 +588,11 @@
                             android:layout_weight="1"
                             android:elevation="13dp"
                             android:fontFamily="sans-serif-condensed"
+                            android:onClick="onClick"
                             android:text="@string/new_game"
                             android:textAlignment="center"
                             android:textSize="24sp"
                             android:textStyle="bold|italic"
-                            android:onClick="onClick"
                             android:typeface="serif" />
 
                     </TableRow>
